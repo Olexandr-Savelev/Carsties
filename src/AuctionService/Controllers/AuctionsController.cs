@@ -1,5 +1,6 @@
 using AuctionService.Data;
 using AuctionService.DTOs;
+using AuctionService.Models;
 using AutoMapper;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -32,7 +33,7 @@ namespace AuctionService.Controllers
         }
 
         [HttpGet("{id}")]
-        public async Task<ActionResult<AuctionDto>> GetAuction(Guid id)
+        public async Task<ActionResult<AuctionDto>> GetAuctionById(Guid id)
         {
             var auction = await _context.Auctions
                 .Include(x => x.Item)
@@ -44,6 +45,18 @@ namespace AuctionService.Controllers
             }
 
             return Ok(_mapper.Map<AuctionDto>(auction));
+        }
+        [HttpPost]
+        public async Task<ActionResult<AuctionDto>> CreateAuction(CreateAuctionDto auctionDto)
+        {
+            var auction = _mapper.Map<Auction>(auctionDto);
+            _context.Auctions.Add(auction);
+            auction.Seller = "Test";
+
+            var result = await _context.SaveChangesAsync() > 0;
+            if (!result) return BadRequest("Unable to save changes in datagbase");
+
+            return CreatedAtAction(nameof(GetAuctionById), new { auction.Id }, _mapper.Map<AuctionDto>(auction));
         }
     }
 }

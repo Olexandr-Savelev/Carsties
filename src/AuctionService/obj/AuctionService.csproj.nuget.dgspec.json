@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Programming\\C_Sharp\\Carsties\\src\\AuctionService\\AuctionService.csproj": {}
+    "D:\\Programming\\C_Sharp\\Carsties\\src\\auctionservice\\AuctionService.csproj": {}
   },
   "projects": {
-    "D:\\Programming\\C_Sharp\\Carsties\\src\\AuctionService\\AuctionService.csproj": {
+    "D:\\Programming\\C_Sharp\\Carsties\\src\\auctionservice\\AuctionService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Programming\\C_Sharp\\Carsties\\src\\AuctionService\\AuctionService.csproj",
+        "projectUniqueName": "D:\\Programming\\C_Sharp\\Carsties\\src\\auctionservice\\AuctionService.csproj",
         "projectName": "AuctionService",
-        "projectPath": "D:\\Programming\\C_Sharp\\Carsties\\src\\AuctionService\\AuctionService.csproj",
+        "projectPath": "D:\\Programming\\C_Sharp\\Carsties\\src\\auctionservice\\AuctionService.csproj",
         "packagesPath": "C:\\Users\\Alexander\\.nuget\\packages\\",
-        "outputPath": "D:\\Programming\\C_Sharp\\Carsties\\src\\AuctionService\\obj\\",
+        "outputPath": "D:\\Programming\\C_Sharp\\Carsties\\src\\auctionservice\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Alexander\\AppData\\Roaming\\NuGet\\NuGet.Config"
